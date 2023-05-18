@@ -8,5 +8,5 @@ metadata:
 spec:
   secretTemplate:
     annotations:
-      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "kube-system,nextcloud,monitoring,argocd"
-      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "kube-system,nextcloud,monitoring,argocd"
+      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "kube-system,nextcloud,monitoring,argocd,homeassistant,adguard"
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "kube-system,nextcloud,monitoring,argocd,homeassistant,adguard"
