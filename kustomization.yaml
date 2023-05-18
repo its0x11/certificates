@@ -1,0 +1,17 @@
+# Certificates deployment
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- resources/certificates.namespace.yaml
+- resources/self-signed-certificate.yaml
+- resources/cluster-issuer-self-signed.yaml
+
+patches:
+- path: patches/wildcard.ryankey.dev-tls.certificate.cert-manager.reflector.namespaces.yaml
+  target:
+    group: cert-manager.io
+    version: v1
+    kind: Certificate
+    namespace: certificates
+    name: wildcard.ryankey.dev-tls
