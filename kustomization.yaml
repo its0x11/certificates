@@ -1,7 +1,7 @@
 # Certificates deployment
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
+namespace: certificates
 resources:
 - resources/certificates.namespace.yaml
 - resources/self-signed-certificate.yaml
